@@ -12,7 +12,7 @@ background_stuff() {
         if [ ! -e "$x" ]; then continue; fi
         export DISPLAY=":${x#X}"
 
-        USER_NAME=$(who | awk -v vt="$DISPLAY" '$0 ~ vt {print $1}')
+        USER_NAME=$(who | awk -v vt="$DISPLAY" '$0 ~ vt {print $1}' | head -n 1)
         USER_ID=$(id -u "$USER_NAME")
         #PULSE_SERVER="unix:/run/user/"$USER_ID"/pulse/native"
 	PULSE_SERVER="127.0.0.1"
