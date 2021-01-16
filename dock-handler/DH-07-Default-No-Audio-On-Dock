@@ -28,11 +28,9 @@ background_stuff() {
 	    sudo -u "$USER_NAME" pactl set-card-profile 1 off
             sudo -u "$USER_NAME" pactl set-card-profile 0 off
         else
-	    xrandr --output DSI-0 --mode 720x1280 --rotate left
-	    xrandr --output DSI-0 --mode 720x1280 --rotate left --panning 1280x720+0+0 --pos 0x0
+	    xrandr --output DSI-0 --mode 720x1280 --rotate left --panning 1280x720+0+0 --pos 0x0 --dpi 237
             xinput enable 6
-	    sudo -u "$USER_NAME" xrandr --output DSI-0 --mode 720x1280 --rotate left
-            sudo -u "$USER_NAME" xrandr --output DSI-0 --mode 720x1280 --rotate left --panning 1280x720+0+0 --pos 0x0
+	    sudo -u "$USER_NAME" xrandr --output DSI-0 --mode 720x1280 --rotate left --panning 1280x720+0+0 --pos 0x0 --dpi 237
             sudo -u "$USER_NAME" xinput enable 6
 	    sudo -u "$USER_NAME" pactl set-card-profile 1 HiFi
             sudo -u "$USER_NAME" pactl set-card-profile 0 off
